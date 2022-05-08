@@ -65,4 +65,7 @@ int main() {
     // just like say bob is an instance of class parent
     // on is an instance of type State_of_Bulb
 
+
+    // This has been resolved now, the type of elements in enum is const int
+
 }
