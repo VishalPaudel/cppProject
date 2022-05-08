@@ -1,0 +1,14 @@
+# ninja log v5
+490	768	1651649480151666371	cppProject	67cb75bd63fcf5ee
+3	404	1651595916570896107	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
+0	67	1651651425917421962	build.ninja	939e4de795d74cf9
+0	488	1651649479869382259	CMakeFiles/cppProject.dir/lab_experiments/Lab_05/Q3_WordList.cpp.o	c92fbadc07d135e6
+2	418	1651485369215868550	CMakeFiles/cppProject.dir/lab_experiments/Lab_05/arrayInitialisation.cpp.o	3e4bbfc4492f1e78
+0	821	1651651487377886633	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
+822	900	1651651487463208969	cppProject	3fa6c6d82d820d38
+2	3172	1651744012612162048	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
+3172	3471	1651744012914447597	cppProject	3fa6c6d82d820d38
+2	429	1651744057290476796	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
+429	479	1651744057342011132	cppProject	3fa6c6d82d820d38
+2	444	1651744076731278259	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
+444	494	1651744076783997611	cppProject	3fa6c6d82d820d38
