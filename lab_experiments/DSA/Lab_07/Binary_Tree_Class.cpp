@@ -1,4 +1,8 @@
 
+// Author: Vishal Paudel
+// I have not been able to figure this code out, especially the traversing
+// and printing.
+
 #include <iostream>
 
 using namespace std;
@@ -29,13 +33,14 @@ private:
 
 public:
 
-    Tree(const int & val=0) {
+    Tree(const int & val=0 /* for efficiency */) {
         (this->root)->data = val;
     }
 };
 
 int main() {
 
-    Tree aryan(5);
+    Tree Plaksha(5);
+    Tree Ashoka(7);
     return 0;
 }

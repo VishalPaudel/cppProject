@@ -1,4 +1,8 @@
 
+// Author: Vishal Paudel
+// All of this has been my own effort, and I vouch for the integrity of this
+// of this assignment
+
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -7,6 +11,8 @@ using namespace std;
 
 void insert_node(int *);
 
+
+// Declarations of the functions
 int return_size(const int *);
 
 int return_depth(const int *);
@@ -14,18 +20,12 @@ int return_depth(const int *);
 void print_tree(const int *);
 
 
+// Definitions of the functions
 void insert_node(int *arr_ptr) {
 
-    int upper_limit = (((int) sizeof(arr_ptr)) / ((int) sizeof(int)));
+    // this function has been skipped as the array representing the tree
+    // is hard coded
 
-    for (int index = 0; arr_ptr[index] != -99 && index < upper_limit; index++) {
-
-        if (index == 0) {
-            continue;
-        }
-
-        std::cout << arr_ptr[index] << '\n';
-    }
 }
 
 
@@ -57,51 +57,77 @@ int return_depth(const int *arr_ptr) {
 
 void print_tree(const int *arr_ptr) {
 
-    int depth = return_depth(arr_ptr);
-    bool flag = false;
-    int width = (int) std::pow(2, depth) - 1;
+    // prints the numbers greater than 9 as A, B, C, ..., their asci character
+
+    int depth = return_depth(arr_ptr);  // the depth of the tree, aka layers
+    bool flag = false;  // wether we have hit the end of the array
+    int width = (int) std::pow(2, depth) - 1;  // num of childs at lowest layer
 
 
     for (int curr_depth = 1; curr_depth <= depth; curr_depth++) {
 
+        int curr_nodes = (int) std::pow(2, curr_depth - 1);  // child at curr depth
+
+        // following are formating conventions
         int side_gaps = (int) std::pow(2, depth - curr_depth) - 1;
-        int curr_nodes = (int) std::pow(2, curr_depth - 1);
         int internal_gaps = (width - curr_nodes - 2 * side_gaps) / (curr_nodes - 1);
 
+        // std::cout << width << ' ' << curr_nodes << ' ' << 2 * side_gaps << ' ' << curr_nodes - 1 << std::endl;
 
-        std::cout << std::string(side_gaps, ' ');
+
+        std::cout << std::string(side_gaps, ' ');  // printing ' ' in the sides
         for (int depth_iterator = 0; depth_iterator < (int) std::pow(2, curr_depth - 1); depth_iterator++) {
 
-            if (flag || arr_ptr[(int) std::pow(2, curr_depth - 1) + depth_iterator] == -99) {
+            if (flag || arr_ptr[(int) std::pow(2, curr_depth - 1) + depth_iterator] == -99  /* -99 is hardcoded to be the last element by convention in my code */) {
 
-                if (!flag) {
+                if (!flag) {  // we have already hit the last element
+
                     flag = true;
+
                 }
                 std::cout << '-';
-                std::cout << std::string(internal_gaps, ' ');
 
             } else {
 
-                std::cout << arr_ptr[(int) std::pow(2, curr_depth - 1) + depth_iterator];
-                std::cout << std::string(internal_gaps, ' ');
+                int number = arr_ptr[(int) std::pow(2, curr_depth - 1) + depth_iterator];
+                if (number > 9) {
+
+                    std::cout << (char) (65 + number - 10);
+
+                } else {
+
+                    std::cout << number;
+
+                }
+
             }
+
+            std::cout << std::string(internal_gaps, ' ');  // gaps with ' '
+
         }
-        std::cout << std::string(side_gaps, ' ');
+        std::cout << std::string(side_gaps, ' ');  // prints ' ' in sides again
         std::cout << std::endl;
     }
-    return;
+
 }
 
 
 int main() {
 
-    int main_bin_heap[20] = {-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -99};
+    const int size = 10;
+    int main_bin_heap[7] = {-1, 3, 6, 7, 8, 9, -99};
+
+    // main_bin_heap[0] = -1;
+    // for (int i = 1; i < (size + 1); i++) {
+    //
+    //     main_bin_heap[i] = i;
+    // }
+    // main_bin_heap[size + 1] = -99;
 
     std::cout << return_size(main_bin_heap) << std::endl;
     std::cout << return_depth(main_bin_heap) << '\n';
     print_tree(main_bin_heap);
 
     return 0;
-
 
 }
