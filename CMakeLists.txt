@@ -4,4 +4,4 @@ project(cppProject)
 include_directories(/Library/Developer/CommandLineTools/usr/include)
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cppProject "lab_experiments/DSA/Lab_07/Binary_Tree_Array.cpp")
+add_executable(cppProject lab_experiments/extra_classes/chain_proper.cpp)
