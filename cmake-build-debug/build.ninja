@@ -49,12 +49,12 @@ cmake_ninja_workdir = /Users/vishalpaudel/Documents/cppProject/cmake-build-debug
 
 build cmake_object_order_depends_target_cppProject: phony || CMakeFiles/cppProject.dir
 
-build CMakeFiles/cppProject.dir/test_folder/playground.cpp.o: CXX_COMPILER__cppProject_Debug /Users/vishalpaudel/Documents/cppProject/test_folder/playground.cpp || cmake_object_order_depends_target_cppProject
-  DEP_FILE = CMakeFiles/cppProject.dir/test_folder/playground.cpp.o.d
+build CMakeFiles/cppProject.dir/lab_experiments/DSA/Lab_07/Binary_Tree_Array.cpp.o: CXX_COMPILER__cppProject_Debug /Users/vishalpaudel/Documents/cppProject/lab_experiments/DSA/Lab_07/Binary_Tree_Array.cpp || cmake_object_order_depends_target_cppProject
+  DEP_FILE = CMakeFiles/cppProject.dir/lab_experiments/DSA/Lab_07/Binary_Tree_Array.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17
   INCLUDES = -I/Library/Developer/CommandLineTools/usr/include
   OBJECT_DIR = CMakeFiles/cppProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/cppProject.dir/test_folder
+  OBJECT_FILE_DIR = CMakeFiles/cppProject.dir/lab_experiments/DSA/Lab_07
 
 
 # =============================================================================
@@ -64,7 +64,7 @@ build CMakeFiles/cppProject.dir/test_folder/playground.cpp.o: CXX_COMPILER__cppP
 #############################################
 # Link the executable cppProject
 
-build cppProject: CXX_EXECUTABLE_LINKER__cppProject_Debug CMakeFiles/cppProject.dir/test_folder/playground.cpp.o
+build cppProject: CXX_EXECUTABLE_LINKER__cppProject_Debug CMakeFiles/cppProject.dir/lab_experiments/DSA/Lab_07/Binary_Tree_Array.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/cppProject.dir
   POST_BUILD = :
