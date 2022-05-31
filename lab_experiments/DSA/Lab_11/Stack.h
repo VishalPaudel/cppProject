@@ -54,7 +54,7 @@ void Stack<Type> :: push(Type var)
 	}
 	catch (int x)	{
 		
-		std::cout << "Stack overflow!" << endl;
+		std::cout << "Stack overflow!" << std::endl;
 		exit(1);
 
 	}
@@ -74,7 +74,7 @@ Type Stack<Type> :: pop()
 	
 	catch (int x) {
 	
-		std::cout << "Stack underflow!";
+		std::cout << "Stack underflow!" << std::endl;
 		exit(1);
 
 	}
